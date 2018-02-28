@@ -6,6 +6,7 @@
 
 import javax.swing.*;
 import java.lang.*;
+import Ejercicio1.Circulo;
 
 /**
  *
@@ -14,9 +15,8 @@ import java.lang.*;
 public class Principal {
     public static void main(String[] args){
         double radio = 0;
-        double perimetro = 0;
-        double area = 0;
         boolean esNumero = true;
+        Circulo circulo = new Circulo();
         do{
             try {
             radio = Double.parseDouble(JOptionPane.showInputDialog(
@@ -25,6 +25,7 @@ public class Principal {
                 "Ingresando el radio",
                 JOptionPane.QUESTION_MESSAGE));
             esNumero = true;
+            circulo.setRadio(radio);
             System.out.println(esNumero);
             } catch (NumberFormatException ex) {
             JOptionPane.showMessageDialog(null, 
@@ -35,11 +36,11 @@ public class Principal {
             System.out.println(esNumero);
         }
         } while(esNumero != true);
-        perimetro = 2 * Math.PI * radio;
-        area = Math.PI * (radio * radio);
+        circulo.calcularPerimetro();
+        circulo.calcularArea();
         JOptionPane.showMessageDialog(null, 
-                "El perimetro es: " + perimetro + 
-                        "\nEl área es: " + area,
+                "El perimetro es: " + circulo.getPerimetro() + 
+                        "\nEl área es: " + circulo.getArea(),
                 "Resultados", 
                 JOptionPane.INFORMATION_MESSAGE);
         

@@ -18,22 +18,28 @@ public class Circulo {
     private double radio;
     private double perimetro;
     private double area;
+    
+    public void setRadio(double radio){
+        this.radio = radio;
+    }
+    
+    public double getArea(){
+        return this.area;
+    }
+    
+    public double getPerimetro(){
+        return this.perimetro;
+    }
+    
+    public double getRadio(){
+        return this.radio;
+    }
+    
+    public void calcularArea(){
+        this.area = Math.PI * (this.radio * this.radio);
+    }
+    
+    public void calcularPerimetro(){
+        this.perimetro = 2 * Math.PI * this.radio;
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
