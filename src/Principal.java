@@ -39,8 +39,8 @@ public class Principal {
         circulo.calcularPerimetro();
         circulo.calcularArea();
         JOptionPane.showMessageDialog(null, 
-                "El perimetro es: " + circulo.getPerimetro() + 
-                        "\nEl área es: " + circulo.getArea(),
+                "El perimetro es: " + String.format("%1$,.6f",circulo.getPerimetro()) + 
+                        "\nEl área es: " + String.format("%1$,.6f",circulo.getArea()),
                 "Resultados", 
                 JOptionPane.INFORMATION_MESSAGE);
         

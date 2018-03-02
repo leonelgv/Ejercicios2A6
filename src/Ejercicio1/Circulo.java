@@ -20,7 +20,11 @@ public class Circulo {
     private double area;
     
     public void setRadio(double radio){
-        this.radio = radio;
+        if(radio <= 0 ){
+            this.radio = 0;
+        } else {
+            this.radio = radio;
+        }
     }
     
     public double getArea(){
